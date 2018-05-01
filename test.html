@@ -1,5 +1,22 @@
 
-<doctype html><head><title>Isaac Z. Schlueter</title>
+<doctype html><head><meta charset="utf-8">
+<title>Rick The Bot</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rick is an easy-to-use moderation bot">
+<meta name="keywords" content="MrSheldon, Rick, Rick The Bot, discord bot, discord moderation bot, discord bots, rick discord bot, MrSheldon#0001, Jonasjac, Ofir#0011 Olybear9, luki.js, JavaScript" />
+<meta name="author" content="MrSheldon">
+<link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/436590622879776769/c9e16454b648e6233eada384a7d4c659.png?size=2048">
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:title" content="Rick The Bot" />
+<meta name="twitter:description" content="Rick is an easy-to-use moderation bot" />
+<meta name="twitter:image" content="https://cdn.discordapp.com/avatars/436590622879776769/c9e16454b648e6233eada384a7d4c659.png?size=2048">
+<meta name="theme-color" content="#C8E0EC">
+<meta property="og:site_name" value="Home">
+<meta property="og:title" content="Rick The Bot" />
+<meta property="og:url" content="https://rick.mrsheldon.me/" />
+<meta property="og:description" content="Rick is an easy-to-use moderation bot" />
+<meta property="og:image" content="https://cdn.discordapp.com/avatars/436590622879776769/c9e16454b648e6233eada384a7d4c659.png?size=2048" />
 <style>
 /*
 https://github.com/isaacs/back-to-markdown.css
@@ -55,46 +72,45 @@ a::after { content: "]" }
 }
 </style>
 <body>
-<h1 id="rick">Isaac Z. Schlueter</h1>
+<h1 id="rick">Rick The Discord Bot</h1>
 
-<p><a href="&#x6D;&#x61;&#x69;&#x6C;&#116;&#111;:&#105;&#64;&#105;&#122;&#x73;&#46;&#109;&#x65;">&#105;&#64;&#105;&#122;&#x73;&#46;&#109;&#x65;</a></p>
-
-<p>Oakland, CA 94610</p>
-
-<p><a href="https://www.twitter.com/izs">@izs</a></p>
+<p><a href="https://discordapp.com/oauth2/authorize?client_id=436590622879776769&scope=bot&permissions=2146958591">Invite</a> <a href="https://discord.gg/wXdpJPj">Support</a></p>
 
 <h2 id="status">Status</h2>
 
-<p>Busy running <a href="https://www.npmjs.com/">a startup</a>.</p>
+<p>Online</p>
 
-<h2 id="servercount">Work</h2>
+<h2 id="servercount">Server Count:</h2>
+<p class="header-stat"><span id="guild-count">100+</span> Servers.</p> 
 
-<ul>
-<li>2014/01 - Present: npm, Inc.</li>
-<li>2010/09 - 2013/12: Joyent</li>
-<li>2010/04 - 2010/08: Kno, Inc.</li>
-<li>2006/01 - 2010/01: Yahoo</li>
-<li>2002/12 - 2005/12: Data Strategies, Inc</li>
-<li>1998/08 - 2002/06: SCSU</li>
-</ul>
+    <script>
+var request=new XMLHttpRequest();
+request.open('GET', 'https://discordbots.org/api/bots/436590622879776769/stats?_', true);
+request.onload=function() {
+    if(request.status>=200&&request.status<400) {
+        var data=JSON.parse(request.responseText);
+        document.getElementById("guild-count").innerText=data['server_count'].toLocaleString();
+    }
+}
+
+;
+request.onerror=function() {}
+
+;
+request.send();
+</script> 
 
 <h2 id="features">Stuff I Do</h2>
 
 <ul>
-<li>npm <a href="http://www.npmjs.com/">http://www.npmjs.com/</a></li>
-<li>NodeJS <a href="http://nodejs.org/">http://nodejs.org/</a></li>
-<li>writing <a href="http://blog.izs.me/">http://blog.izs.me/</a></li>
-<li>programming <a href="http://github.com/isaacs">http://github.com/isaacs</a></li>
-<li>tweeting <a href="http://twitter.com/izs">@izs</a></li>
+<li>High-Level Moderation</li>
+<li>Automod</li><li>Logging</li>
+<li>Server Configuration</li>
 </ul>
 
-<h2 id="botlits">School</h2>
+<h2 id="botlits">Bot Lists</h2>
 
 <ul>
-<li>Attended Southern Connecticut State University</li>
-<li>Studied Math, Computer Science, Physics, and Philosophy</li>
-<li>Left without a degree</li>
-<li>Also studied some sign language at Berkeley City College</li>
+<li>Botsfordiscord.com <a href="https://botsfordiscord.com/bot/436590622879776769">Visit</a></li>
+<li>Discordbots.org <a href="https://discordbots.org/bot/436590622879776769">Visit</a></li>
 </ul>
-
-<a href="/resume.html">longer form resume</a>
